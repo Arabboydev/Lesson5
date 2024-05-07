@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category page</title>
+</head>
+<body>
+    <h1>This is category page</h1><br>
+    {% for category in categories %}
+        <ul>
+         <li><a href="{% url 'get_books' category.pk %}">{{category.name}}</a><br></li>
+            </ul>
+    {% endfor %}
+    <a href="{% url 'add_books' %}"><b>Add Books</b></a><br>
+</body>
+</html>
